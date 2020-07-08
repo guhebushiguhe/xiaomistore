@@ -92,11 +92,14 @@ $colorArr.click(function(){
 })
 
 // 更新商品信息
-function proInfo() {
-    $('p.pro-info').text($ver.text() + ' ' + $color.text())
+var priceCurrent = 0
+var priceMarket = 0
+var priceInfo = ''
 
-    var priceCurrent = 0
-    var priceMarket = 0
+function proInfo() {
+    priceInfo = $ver.text() + ' ' + $color.text()
+    $('p.pro-info').text(priceInfo)
+
     if($ver.index() == 0){
         priceCurrent = 1499
         priceMarket = 1699
@@ -113,3 +116,9 @@ function proInfo() {
     $('p.price').text('秒杀价:  ' + priceMarket +' 元')
 }
 
+// 添加到购物车点击事件
+$('.btn-primary').click(function() {
+    proInfo()
+    var cartUrl = './cart.html?priceCurrent=' + priceCurrent + '&priceInfo=' + priceInfo
+    $(location).prop('href',cartUrl)
+})
