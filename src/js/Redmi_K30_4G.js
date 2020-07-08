@@ -92,11 +92,16 @@ $colorArr.click(function(){
 })
 
 // 更新商品信息
-function proInfo() {
-    $('p.pro-info').text($ver.text() + ' ' + $color.text())
+var priceCurrent = 0
+var priceMarket = 0
+var proVersion = ''
+var proName = ''
 
-    var priceCurrent = 0
-    var priceMarket = 0
+function proInfo() {
+    proVersion = $ver.text() + ' ' + $color.text()
+    $('p.pro-info').text(proVersion)
+    proName = $('.main .product-con .title').text() + ' ' + proVersion
+
     if($ver.index() == 0){
         priceCurrent = 1499
         priceMarket = 1699
@@ -110,6 +115,33 @@ function proInfo() {
     
     $('.price-box span').text(priceCurrent)
     $('.marketprice-box del').text(priceMarket)
-    $('p.price').text('秒杀价:  ' + priceMarket +' 元')
+    $('p.price').text('秒杀价:  ' + priceCurrent +' 元')
 }
 
+// 添加到购物车点击事件
+$('.btn-primary').click(function() {
+    proInfo()
+    // var cartUrl = './cart.html?priceCurrent=' + priceCurrent + '&priceInfo=' + priceInfo
+    // $(location).prop('href',cartUrl)
+    $.get('../interface/addwq.php',{
+        id:4,
+        img:"../images/Redmi_K30.jpg",
+        price:priceCurrent,
+        name:proName,
+    },function(data){
+        console.log(data)
+        var json = JSON.parse(data);
+        if(json.code==1){
+            alert('添加商品成功');
+            window.location.href = "./cart.html";
+        }
+    })
+})
+
+// 导航栏购物车按钮
+// $('.cart-btn').click(function() {
+//     window.location.href = "./cart.html";
+// })
+// $('.cart-btn').mouseover(function(){
+
+// })

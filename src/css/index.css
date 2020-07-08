@@ -11,10 +11,35 @@
     color: #b0b0b0;
     font-size: 12px;
     line-height: 40px;
-    display: flex;
 }
-.nav > .container > a{
+.nav > .container a:hover{
+    color: #fff;
+}
+.nav > .container > .left-box{
+    width: 800px;
+    float: left;
+}
+.nav > .container > .left-box a{
     margin-right: 15px;
+    float: left;
+}
+.nav > .container > .right-box{
+    /* width: 400px; */
+    float: right;
+}
+.nav > .container > .right-box a{
+    margin-right: 15px;
+    float: left;
+}
+.nav > .container > .right-box .cart-btn{
+    height: 40px;
+    padding: 0 20px;
+    margin-right: 0;
+    background: #424242;
+}
+.nav > .container > .right-box .cart-btn:hover{
+    color: #ff6700;
+    background: #fff;
 }
 
 /* 头部header */

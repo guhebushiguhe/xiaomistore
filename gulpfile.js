@@ -88,6 +88,12 @@ const libHandler = ()=>{
     return gulp.src('./src/lib/**')
     .pipe(gulp.dest('./dist/lib'))
 }
+//书写关于interface的移动的规则
+const interfaceHandler = ()=>{
+    //我打算把src处理完成以后,都放到dist文件夹下
+    return gulp.src('./src/interface/**')
+    .pipe(gulp.dest('./dist/interface'))
+}
 //书写关于images的移动的规则
 const imagesHandler = ()=>{
     return gulp.src('./src/images/**') //"**"表示images下面的所有文件
@@ -143,6 +149,8 @@ const watchHandler = ()=>{
 module.exports.default = libHandler;
 module.exports.images = imagesHandler;
 module.exports.del = delHandler;
+module.exports.lib = libHandler;
+module.exports.interface = interfaceHandler;
 module.exports.css = cssHandler;
 module.exports.html = htmlHandler;
 module.exports.js = jsHandler;
@@ -160,7 +168,7 @@ module.exports.js = jsHandler;
 //3 最终优化任务导出
 module.exports.default = gulp.series(
     delHandler,
-    gulp.parallel(libHandler,imagesHandler,cssHandler,htmlHandler,jsHandler),
+    gulp.parallel(libHandler,interfaceHandler,imagesHandler,cssHandler,htmlHandler,jsHandler),
     webserverHandler,
     watchHandler
 )

@@ -1,3 +1,6 @@
+i{
+    font-style: inherit;
+}
 /* 头部header */
 .header{
     width: 100%;
@@ -152,27 +155,26 @@
     width: 150px;
     height: 70px;
 }
-.col-num .up,.col-num .down{
-    width: 70px;
-    height: 70px;
-    cursor: pointer;
-}
-.col-num .up:hover,.col-num .down:hover{
-    background: #ccc;
-}
+
 .item-table .col-num .num-counter{
     width: 150px;
     height: 40px;
+    float: left;
     text-align: center;
     line-height: 40px;
     border: 1px solid #ccc;
     margin-top: 14px;
 }
 .item-table .col-num .down,.item-table .col-num .up{
-    width: 38px;
-    height: 38px;
+    width: 39px;
+    height: 40px;
+    box-sizing: border-box;
     float: left;
     border: none;
+    cursor: pointer;
+}
+.col-num .up:hover,.col-num .down:hover{
+    background: #ccc;
 }
 .item-table .col-num .goods-num{
     width: 72px;

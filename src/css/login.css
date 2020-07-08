@@ -1,0 +1,144 @@
+/* 头部header */
+.header{
+    width: 1130px;
+    height: 98px;
+    margin: 0 auto;
+}
+.header .home{
+    width: 200px;
+    height: 98px;
+    float: left;
+}
+.header .home img{
+    width: 200px;
+    height: 98px;
+}
+
+/* 主体main */
+.main{
+    width: 1230px;
+    height: 588px;
+    margin: 0 auto;
+    position: relative;
+}
+.main .link{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 1230px;
+    height: 588px;
+    margin: 0 auto;
+
+}
+.main .link img{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+.main .login-box{
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+    width: 410px;
+    /* height: 500px; */
+    background: #fff;
+    /* border: 1px solid #000; */
+}
+.login-box .login-head{
+    /* width: 100%; */
+    width: 280px;
+    margin: 0 auto;
+    height: 84px;
+    padding: 27px 0 24px;
+    font-size: 24px;
+    line-height: 84px;
+    color: #666;
+}
+.login-box .login-head span{
+    float: left;
+}
+.login-box .login-head .signal{
+    padding: 0 40px;
+}
+.login-box .login-head .active{
+    color: #f56600;
+}
+.login-box .login-body{
+    width: 100%;
+    /* height: 380px; */
+    /* border: 1px solid #000; */
+}
+.login-box .login-body input{
+    display: block;
+    width: 346px;
+    height: 48px;
+    box-sizing: border-box;
+    padding: 13px 16px 13px 14px;
+    border: 1px solid #ccc;
+    outline: none;
+    margin: 0 auto;
+    margin-bottom: 14px;
+    font-size: 22px;
+    line-height: 22px;
+}
+.login-box .login-body .login-btn{
+    width: 346px;
+    height: 48px;
+    box-sizing: border-box;
+    padding: 13px 16px 13px 14px;
+    background: #f56600;
+    border: 1px solid #f56600;
+    color: #fff;
+    margin: 0 auto;
+    margin-bottom: 14px;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+}
+.login-box .login-body .comment{
+    font-size: 14px;
+}
+.login-box .login-body .comment .left-box{
+    width: 140px;
+    float: left;
+    margin-left: 30px;
+    color: #f56600;
+}
+
+.login-box .login-body .comment .right-box{
+    /* width: 200px; */
+    float: right;
+    margin-right: 30px;
+}
+.login-box .login-body .comment .right-box a,.login-box .login-body .comment .right-box .signal{
+    float: left;
+}
+.login-box .login-body .comment .right-box .signal{
+    padding: 0 5px;
+}
+.login-box .login-body .login-others{
+    margin: 100px auto;
+}
+.login-box .login-body .login-others fieldset{
+    border: 1px solid #ccc;
+    border-width: 1px 0 0 0;
+    text-align: center;
+    font-size: 14px;
+    color: #ccc;
+}
+.login-box .login-body .login-others .links{
+    width: 350px;
+    margin: 20px auto;
+    /* border: 1px solid #000; */
+}
+.login-box .login-body .login-others a{
+    float: left;
+    padding: 0 10px;
+}
+
+/* 页脚footer */
+.footer{
+    width: 100%;
+}
