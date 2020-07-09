@@ -1,17 +1,5 @@
-/* 头部header */
-.header{
-    width: 1130px;
-    height: 98px;
-    margin: 0 auto;
-}
-.header .home{
-    width: 200px;
-    height: 98px;
-    float: left;
-}
-.header .home img{
-    width: 200px;
-    height: 98px;
+body{
+    background: #f9f9f9;
 }
 
 /* 主体main */
@@ -21,53 +9,79 @@
     margin: 0 auto;
     position: relative;
 }
-.main .link{
+.main .login-box {
     position: absolute;
+    top: 100px;
     left: 50%;
-    top: 0;
     transform: translateX(-50%);
-    width: 1230px;
-    height: 588px;
-    margin: 0 auto;
-
-}
-.main .link img{
-    position: absolute;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
-}
-.main .login-box{
-    position: absolute;
-    bottom: 0;
-    right: 50px;
-    width: 410px;
+    width: 854px;
     /* height: 500px; */
+    padding: 0 50px 0;
     background: #fff;
     /* border: 1px solid #000; */
 }
+.main .login-box .logo{
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 22px;
+    background-color: #ff6700;
+    overflow: hidden;
+}
+.main .login-box .logo:after{
+    content:'';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    opacity: 1;
+    transition: left 0.2s;
+    width: 55px;
+    height: 55px;
+    background: url(../images/mi-logo.png) no-repeat 50% 50% ;
+}
+.main .login-box .logo:before{
+    content:'';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: -62px;
+    transition: left 0.2s;
+    width: 55px;
+    height: 55px;
+    background: url(../images/mi-home.png) no-repeat 50% 50% ;
+}
+.main .login-box .logo:hover::after{
+    left: 62px;
+    /* opacity: 0; */
+}
+.main .login-box .logo:hover::before{
+    left: 0px;
+    /* opacity: 1; */
+}
+
 .login-box .login-head{
     /* width: 100%; */
     width: 280px;
-    margin: 0 auto;
+    margin: 90px auto 0;
     height: 84px;
     padding: 27px 0 24px;
     font-size: 24px;
     line-height: 84px;
     color: #666;
 }
-.login-box .login-head span{
-    float: left;
-}
-.login-box .login-head .signal{
-    padding: 0 40px;
-    color: #ccc;
-}
-.login-box .login-head .active{
-    color: #f56600;
-}
-.login-box .login-head .un-login,.login-box .login-head .QR-login{
+.login-box .login-head .title{
+    width: 100%;
+    display: inline-block;
+    margin: 0 auto;
     cursor: pointer;
+    color: #333;
+    text-align: center;
+    font-size: 30px;
+    /* border: 1px solid #000; */
 }
 .login-box .login-body{
     width: 100%;
@@ -89,11 +103,11 @@
 }
 .login-box .login-body > span{
     display: inline-block;
-    margin-left: 30px;
+    margin-left: 254px;
     font-size: 14px;
     color: #ccc;
 }
-.login-box .login-body .login-btn{
+.login-box .login-body .register-btn{
     width: 346px;
     height: 48px;
     box-sizing: border-box;
@@ -110,25 +124,12 @@
 }
 .login-box .login-body .comment{
     font-size: 14px;
+    text-align: center;
 }
-.login-box .login-body .comment .left-box{
-    width: 140px;
-    float: left;
-    margin-left: 30px;
-    color: #f56600;
+.login-box .login-body .comment span{
+    font-weight: 700;
 }
 
-.login-box .login-body .comment .right-box{
-    /* width: 200px; */
-    float: right;
-    margin-right: 30px;
-}
-.login-box .login-body .comment .right-box a,.login-box .login-body .comment .right-box .signal{
-    float: left;
-}
-.login-box .login-body .comment .right-box .signal{
-    padding: 0 5px;
-}
 .login-box .login-body .login-others{
     margin: 100px auto;
 }
@@ -192,4 +193,4 @@
     display: inline-block;
     width: 18px;
     height: 18px;
-}
+};

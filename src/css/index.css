@@ -64,6 +64,7 @@
     position: relative;
     margin-top: 22px;
     background-color: #ff6700;
+    overflow: hidden;
 }
 .header > .container > .logo:after{
     content:'';

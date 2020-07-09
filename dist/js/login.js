@@ -1,1 +1,1 @@
-"use strict";
+"use strict";$(".login-btn").click(function(){var o=$(".username").val(),n=$(".password").val();console.log(o,n),$.get("../interface/login.php",{username:o,password:n},function(o){console.log(o),json=JSON.parse(o),console.log(json),0==json.code?alert("用户名或密码出错,登录失败!"):1==json.code&&alert("登录成功")})});

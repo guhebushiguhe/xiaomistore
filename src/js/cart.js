@@ -17,6 +17,7 @@ $(document).ready(function(){
             upAndDown()
             iconYesToogle()
             iconYesBind()
+            delBtns()
             proNumInit()
             // alert('你买了的东西是'+JSON.stringify(json.data))
         }
@@ -51,9 +52,12 @@ function delGoods(e,type){
         $('.item-table').eq($(e).parent().parent().parent().index()).remove()
     }
 }
-$('.del-btn').click(()=>{
-    delGoods(this,1)
-})
+function delBtns(){
+    $('.del-btn').click(()=>{
+        delGoods(this,1)
+    })
+}
+delBtns()
 
 // 增减物品
 function upAndDown() {
@@ -131,10 +135,11 @@ function iconYesBind(){
 
 // 显示统计信息
 function proNumInit() {
-    console.log('刷新结算信息')
-    // 显示已选商品数量
     var $proNumTotal = 0
     var $proNum = 0
+    var $proPriceTotal = 0
+    console.log('刷新结算信息')
+    // 显示已选商品数量
     $('.goods-num').each(function() {
         $proNumTotal += $(this).val()-0
     })
@@ -143,7 +148,7 @@ function proNumInit() {
     })
     $('.pro-num-total').text($proNumTotal)
     $('.pro-num').text($proNum)
-    var $proPriceTotal = 0
+
     $('.pro-price-sum.active').each(function(){
         $proPriceTotal += parseInt($(this).text())
     })
@@ -152,3 +157,9 @@ function proNumInit() {
     $('.pro-price-total').text($proPriceTotal)
 }
 proNumInit()
+
+
+// 去结算按钮
+$('.btn-primary').click(function(){
+    alert('交易成功,共计购买' + $('.pro-num').text() + '件商品,已付费'+ $('.pro-price-total').text() + '元')
+})

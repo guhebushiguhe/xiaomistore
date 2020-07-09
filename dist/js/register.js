@@ -1,0 +1,1 @@
+"use strict";$(".register-btn").click(function(){var e=$(".username").val(),o=$(".password").val();console.log(e,o),$.get("../interface/register.php",{username:e,password:o},function(e){console.log(e),json=JSON.parse(e),console.log(json),0==json.code?alert("注册失败!"):1==json.code&&alert("注册成功!")})});
